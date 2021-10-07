@@ -34,6 +34,20 @@
         margin-left: 25%;
       }
 
+      h3 {
+        text-align: left;
+        margin-top: 60px;
+        margin-bottom: 30px;
+        margin-left: 25%;
+      }
+
+      h4 {
+        text-align: left;
+        margin-top: 60px;
+        margin-bottom: 30px;
+        margin-left: 25%;
+      }
+
       hr.topline {
         margin-bottom: 20px;
         border: 0;
@@ -63,6 +77,24 @@
         left: 50%;
         transform: translate(-50%, -50%);
       }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      div.placesRow {
+        margin-left: 25%;
+        margin-right: 25%;
+      }
+
+      div.places {
+        float:left;
+        width: 50%;
+        padding: 5px;
+      }
+
+
+
     </style>
 
   </head>
@@ -75,37 +107,52 @@
     <div class="topcontainer">
       <img src="Banner_Rome1.jpg" alt="About Me" class="topcenter" style="width:100%">
       <div class="centered">Wecome to My Page</div>
-
     </div>
-    <h2>A Little About Me</h2>
 
-      <blockquote class="Para1"> 
-        My name is Joshua and I’m serving in the United States Air Force as a systems administrator. Born 
-        in Dover, Delaware in 1988, I moved to multiple states until settling in New Hampshire at the age 
-        of 5. I lived on the edge of the White Mountains in New Hampshire in a town that had just over one 
-        thousand people. I took in interest in technology from the start but maintained an active social life 
-        and was employed early on in my life. I worked as a lifeguard at 15 and as a cashier until I was 18. 
-        Upon graduating high school, I joined the Air Force. While the Air Force wasn’t my first choice, I 
-        felt it was best choice as it enabled me to earn money while receiving my education using tuition 
-        assistance.
-      </blockquote>
+    <div class="aboutmeRow">
+      <div class="aboutmeBio">
+        <h2>A Little About Me</h2>
+        <blockquote class="Para1"> 
+          My name is Joshua and I’m serving in the United States Air Force as a systems administrator. Born 
+          in Dover, Delaware in 1988, I moved to multiple states until settling in New Hampshire at the age 
+          of 5. I lived on the edge of the White Mountains in New Hampshire in a town that had just over one 
+          thousand people. I took in interest in technology from the start but maintained an active social life 
+          and was employed early on in my life. I worked as a lifeguard at 15 and as a cashier until I was 18. 
+          Upon graduating high school, I joined the Air Force. While the Air Force wasn’t my first choice, I 
+          felt it was best choice as it enabled me to earn money while receiving my education using tuition 
+          assistance.
+        </blockquote>
 
-      <blockquote class="Para2"> 
-        The Air Force has taken me all over the world, starting in Oklahoma all the way to Germany. 
-        Oklahoma wasn’t my favorite but that was balanced out by how amazing Germany was. I couldn’t 
-        begin to tell you all the things I loved about Germany but some of my favorite things were the 
-        castles scattered all over the country, the cobblestone villages with quaint restraints and shops, 
-        the endless road biking trails, and access to travel around Europe. After spending three years in 
-        Germany, I made my way back to the states and now I live in northern Virginia. I love the D.C. area 
-        and all the things that I can do here. While people complain about the traffic, I have access to 
-        some of the best museums, parks, harbors, and historical places. I also met my now wife making this 
-        my favorite place. 
-      </blockquote>
-      
-      <img src1="aboutmejpg.png" alt="About Me" class="center">
-    <h3></h3>
+        <blockquote class="Para2"> 
+          The Air Force has taken me all over the world, starting in Oklahoma all the way to Germany. 
+          Oklahoma wasn’t my favorite but that was balanced out by how amazing Germany was. I couldn’t 
+          begin to tell you all the things I loved about Germany but some of my favorite things were the 
+          castles scattered all over the country, the cobblestone villages with quaint restraints and shops, 
+          the endless road biking trails, and access to travel around Europe. After spending three years in 
+          Germany, I made my way back to the states and now I live in northern Virginia. I love the D.C. area 
+          and all the things that I can do here. While people complain about the traffic, I have access to 
+          some of the best museums, parks, harbors, and historical places. I also met my now wife making this 
+          my favorite place. 
+        </blockquote>
+      </div>
+    </div>
 
-    
+    <h4>Some of my Favorite Sites</h4>
+    <a href="https://www.reddit.com/" class="reddit">Reddit</a>
+    <a href="https://www.youtube.com/">Youtube</a>
+
+    <h3>Places I Traveled To</h3>
+    <div class="placesRow">
+      <div class="places">
+        <img src="Germany.jpg" alt="Germany" class="germanPic" style="width:100%">
+        <div class="Germany description">Heidelberg, Germany</div>
+      </div>
+      <div class="places">
+        <img src="London.jpg" alt="London" class="londonPic" style="width:100%">
+        <div class="London description">London, England</div>
+      </div>
+    </div>
+
 
   </body>
 
