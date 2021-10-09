@@ -103,9 +103,11 @@
       }
 
       /* My image in the Bio */
-      div.mePic {
-        min-width: 800px;
+      @media (max-width: 600px) {
+        div.mePic {
+          display:none;
       }
+}
 
       /* Changes the background color of the bio Container */
       div.Bio:hover {
