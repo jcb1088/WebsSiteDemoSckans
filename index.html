@@ -2,7 +2,7 @@
 <!-- 
   Home Page for Demo
   Coded by: Joshua Bouchard
-  Last Update: 08Oct2021
+  Last Update: 10Oct2021
   Description: This site is to demonstrate my knowledge for setting up a webpage.
   Class: CSCI434
 -->
@@ -40,7 +40,6 @@
         text-align: left;
         margin-top: 60px;
         margin-bottom: 30px;
-        margin-left: 20%;
       }
       h5 {
         color:ghostwhite;
@@ -55,7 +54,7 @@
         border-top: 1px solid #d8d0d0;
       }
 
-      /* navigation Bar on top */
+      /* navigation Bar on top of page */
       div.topnav {
         overflow: hidden;
         background-color:rgb(76, 98, 129);
@@ -102,9 +101,9 @@
         margin-left: 10px;
       }
 
-      /* Small Device View */
-      /* will move for org */
-      @media (max-width: 600px) {
+      /* This will change the margins for smaller devices*/
+      /* will move for org, not working as yet*/
+      @media all and (max-width: 600px) {
         div.BioPic {
           display:none;
         }
@@ -182,6 +181,12 @@
         margin-right: 15%;
       }
 
+      /* Favorite Sites, Note: Will be removed for dropdown bar on the Menu */
+      div.favorites {
+        margin-left: 15%;
+        margin-right: 15%;
+      }
+
       /* Bottom box used for contacts */
       div.bottomBox {
         background-color:rgb(76, 98, 129);
@@ -216,11 +221,12 @@
 
     <!-- Navigation Bar-->
     <div class="topnav">
-      <a class="active" href="index.html">Home</a>
-      <a href="#tab2">Tab2</a>
-      <button>Favorite Sites</button> 
-      <a href="#about">About</a>
+        <a href="index.html">Home</a>
+        <a href="#">Under Construction</a>
+        <a href="#">Under Construction</a>
+        <a href="#about">About</a>
     </div>
+
 
     <!--MY Bio near the top of page-->
     <div class="Bio">
@@ -256,11 +262,6 @@
       </div>
     </div>
 
-    <!-- Will move to a dropdown menu on the navigation bar-->
-    <h4>Some of my Favorite Sites</h4>
-    <a href="https://www.reddit.com/" class="reddit">Reddit</a>
-    <a href="https://www.youtube.com/">Youtube</a>
-
     <!--Travel Description Box-->
     <div class="travelInfo">
       <h3>Places I Traveled To</h3>
@@ -292,15 +293,20 @@
       </div>
     </div>
 
-
+    <!-- Will move to a dropdown menu on the navigation bar-->
+    <div class="favorites">
+      <h4>Some of my Favorite Sites</h4>
+      <a href="https://www.reddit.com/" class="reddit" style="margin-right: 8px;">Reddit</a>
+      <a href="https://www.youtube.com/" style="padding: 8px">Youtube</a>
+      <a href="https://nfl.com/" style="padding: 8px">NFL Network</a>
+  </div>
 
     <!--Bottom Banner Will go Here-->
     <div class="bottomBox">
       <div class="bottomText">
-        <h5>Contact</h5>
+        <h5> My Contact Information</h5>
         <p>
           <a href="mailto: Joshua.Bouchard@sckans.edu" class="email">Email</a>
-
         </p>
       </div>
     </div>
