@@ -21,16 +21,20 @@
         font-family:'Trebuchet MS';
         margin:0; 
       }
-      h1 {
+
+      /* Top text on page "Joshua's Page" */
+      h1 { 
         color: darkgray;
         font-size: medium;
         text-align:left;
-        margin: 15px 5%;
+        margin: 1%;
       }
+      /* Bio Title "A Little About Me" */
       h2 {
         margin-bottom: 30px;
         color: white;
       }
+      /* Title for Images I traveled to "Places I Traveled To" */
       h3 {
         text-align: left;
         margin-top: 60px;
@@ -52,6 +56,22 @@
         margin-bottom: 20px;
         border: 0;
         border-top: 1px solid #d8d0d0;
+      }
+
+      /* This is for the banner and text within the banner on the top of the page */
+      div.topcontainer {
+        position: relative;
+        text-align: center;
+        font-size:xx-large;
+        color: rgb(202, 188, 188);
+      }
+
+      /* Welcome to my Page Text */
+      div.centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
 
       /* navigation Bar on top of page */
@@ -128,22 +148,6 @@
       /* Changes the background color of the bio Container */
       div.Bio:hover {
         background-color:rgb(77, 151, 180);
-      }
-
-      /* This is for the banner and text within the banner on the top of the page */
-      div.topcontainer {
-        position: relative;
-        text-align: center;
-        font-size: xx-large;
-        color: rgb(202, 188, 188);
-      }
-
-      /* Welcome to my Page Text */
-      div.centered {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
       }
 
       /* Creates a Row of Two Pics */
