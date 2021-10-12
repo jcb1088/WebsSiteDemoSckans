@@ -67,11 +67,6 @@
         color: rgb(202, 188, 188);
       }
 
-      img.topcenter {
-        width:100%;
-
-      }
-
       /* Welcome to my Page Text */
       div.centered {
         position: absolute;
@@ -118,15 +113,7 @@
       }
 
       /* Creates a Row of Two Pics -------------*/
-      div.placesRow {
-        margin-left: 12vw;
-        margin-right: 12vw;
-        display: flex;
-        justify-content:space-evenly;
-      }
-
-      /* Creates a Row of Two Pics */
-      div.placesRow2 {
+      div.placesRow, div.placesRow2{
         margin-left: 12vw;
         margin-right: 12vw;
         display: flex;
@@ -134,27 +121,20 @@
       }
 
       /* Picture Properties */
-      div.places {
+      div.places, div.places2 {
         float:left;
         width: 50%;
         padding: 5px;
-        transition-delay: .3s;
-        transition: transform .3s;
+        transition-delay: .5s;
+        transition: transform 1s, background-color 1s ease-out,
+        font-size 1s, color 1s ease-out;
+        transition-delay: 0.25s;
       }
-      div.places:hover {
+      div.places:hover, div.places2:hover {
       transform: scale(1.2);
-    }
-
-      /* Picture Properties */
-      div.places2 {
-        float:left;
-        width: 50%;
-        padding: 5px;
-        transition-delay: .3s;
-        transition: transform .3s;
-      }
-      div.places2:hover {
-      transform: scale(1.2);
+      font-size:x-large;
+      background-color: rgb(77, 151, 180);
+      color: ghostwhite;
     }
 
       /* Favorite Sites, Note: Will be removed for dropdown bar on the Menu */
@@ -255,7 +235,7 @@
 
     <!--Banner at Top of Page------------------->
     <div class="topcontainer">
-      <img src="Banner_Rome1.jpg" alt="About Me" class="topcenter">
+      <img src="Banner_Rome1.jpg" alt="About Me" class="topcenter" style="width:100%;">
       <div class="centered">Wecome to My Page</div>
     </div>
 
@@ -323,21 +303,21 @@
     <div class="placesRow">
       <div class="places">
         <img src="Germany.jpg" alt="Germany" class="germanPic" style="width:100%">
-        <div class="Germany description">Heidelberg, Germany</div>
+        <div class="germanyD">Heidelberg, Germany</div>
       </div>
       <div class="places">
         <img src="London.jpg" alt="London" class="londonPic" style="width:100%">
-        <div class="London description">London, England</div>
+        <div class="londonD">London, England</div>
       </div>
     </div>
     <div class="placesRow2">
       <div class="places2">
         <img src="Vatican City.jpg" alt="Vatican" class="VaticanPic" style="width:100%">
-        <div class="Vatican City description">Vatican City</div>
+        <div class="vaticanD">Vatican City</div>
       </div>
       <div class="places2">
         <img src="Rome.JPG" alt="Rome" class="RomePic" style="width:100%">
-        <div class="Rome description">Rome, Italy</div>
+        <div class="romeD">Rome, Italy</div>
       </div>
     </div>
 
