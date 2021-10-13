@@ -82,6 +82,7 @@
       div.Bio {
         margin-left: 12vw;
         margin-right: 12vw;
+        margin-top: 7%;
         background-color:rgb(108, 162, 182);
         border-radius: 25px;
         padding: 45px;
@@ -165,7 +166,6 @@
     #navbar {
       overflow: hidden;
       background-color: rgb(76, 98, 129);
-      margin-bottom: 7%;
       margin-top: -7px;
     }
 
@@ -187,13 +187,13 @@
 
   
     /* The Dropdown Menu -------------*/
-    div.dropdown {
+    #dropdown {
       float: left;
       overflow: hidden;
     }
 
     /* The Dropdown Menu */
-    div.dropdown button.dropdownbutton {
+    #dropdown button.dropdownbutton {
       font-size: 16px;  
       border: none;
       outline: none;
@@ -205,10 +205,10 @@
     }
 
     /* Change color on the dropdown elements when hovering */
-    #navbar a:hover, div.dropdown:hover button.dropdownbutton {
+    #navbar a:hover, #dropdown:hover button.dropdownbutton {
       background-color: rgb(199, 181, 181);
     }
-    div.dropdown-content {
+    #dropdown-content {
       display: none;
       position: absolute;
       background-color: #f9f9f9;
@@ -216,7 +216,7 @@
       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       z-index: 1;
     }
-    div.dropdown-content a {
+    #dropdown-content a {
       float: none;
       color: black;
       padding: 12px 16px;
@@ -224,10 +224,10 @@
       display: block;
       text-align: left;
     }
-    div.dropdown-content a:hover {
+    #dropdown-content a:hover {
       background-color: #ddd;
     }
-    div.dropdown:hover div.dropdown-content {
+    #dropdown:hover #dropdown-content {
       display: block;
     }
 
@@ -250,11 +250,11 @@
       <a href="index.html"><i class="fa fa-home fa-lg"></i> Home</a>
       <a href="#"><i class="fa fa-camera fa-lg" aria-hidden="true"></i> Multimedia Page</a>
       <a href="#">My Travels</a>
-      <div class="dropdown">
+      <div id="dropdown">
         <button class="dropdownbutton"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i> My Favorite Sites 
           <i class="Buttondrop"></i>
         </button>
-        <div class="dropdown-content">
+        <div id="dropdown-content">
           <a href="https://www.reddit.com/">Reddit</a>
           <a href="https://www.youtube.com/">Youtube</a>
           <a href="https://nfl.com/">NFL Network</a>
