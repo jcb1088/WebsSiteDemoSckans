@@ -2,7 +2,7 @@
 <!-- 
   Home Page for Demo
   Coded by: Joshua Bouchard
-  Last Update: 02Oct2021
+  Last Update: 11Oct2021
   Description: This site is to demonstrate my knowledge for setting up a webpage.
   Class: CSCI434
 -->
@@ -12,58 +12,65 @@
 
   <head> 
     <meta charset="utf-8">
-    <title>Welcome Page Header</title>
+    <title>Joshua's Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
+
+
       body {
         background-color:rgba(255, 241, 241, 0.979);
         font-family:'Trebuchet MS';
+        margin:0; 
       }
 
-      h1 {
+      /* Top text on page "Joshua's Page" */
+      h1 { 
         color: darkgray;
         font-size: medium;
         text-align:left;
-        margin: 15px 5%;
+        margin: 1%;
       }
-
+      /* Bio Title "A Little About Me" */
       h2 {
-        margin-top: 60px;
         margin-bottom: 30px;
+        color: white;
       }
-
+      /* Title for Images I traveled to "Places I Traveled To" */
       h3 {
         text-align: left;
-        margin-top: 60px;
         margin-bottom: 30px;
-        margin-left: 25%;
       }
-
+      /* Title for favorite sites "Some of my Favorite Sites" */
       h4 {
         text-align: left;
         margin-top: 60px;
         margin-bottom: 30px;
-        margin-left: 25%;
+      }
+      /* "Contact Info Title My Contact info" */
+      h5 {
+        color:ghostwhite;
+        font-size:x-large;
+        margin-bottom: 10px;
       }
 
+      /* This is the single Line on the top of the page */
       hr.topline {
         margin-bottom: 20px;
         border: 0;
         border-top: 1px solid #d8d0d0;
       }
 
-      div.Bio {
-        margin-left: 25%;
-        margin-right: 25%;
-      }
-
+      /* This is for the banner and text within the banner on the top of the page -------------*/
       div.topcontainer {
         position: relative;
         text-align: center;
-        font-size: xx-large;
+        font-size:xx-large;
         color: rgb(202, 188, 188);
       }
 
+      /* Welcome to my Page Text */
       div.centered {
         position: absolute;
         top: 50%;
@@ -71,25 +78,160 @@
         transform: translate(-50%, -50%);
       }
 
-      * {
-        box-sizing: border-box;
+      /*** My Bio Infomation -------------*/
+      div.Bio {
+        margin-left: 12vw;
+        margin-right: 12vw;
+        margin-top: 7%;
+        background-color:rgb(108, 162, 182);
+        border-radius: 25px;
+        padding: 45px;
+        box-shadow: 10px 10px 5px grey;
+        transition:background-color 2s;
+        display: flex;
       }
 
-      div.placesRow {
-        margin-left: 25%;
-        margin-right: 25%;
+      /* My Bio Description */
+      div.BioText {
+        float: left;
       }
 
-      div.places {
+      /* My Bio img div */
+      div.BioPic {
+        float: right;
+        margin-left: 10px;
+      }
+
+      /* This will change the margins for smaller devices*/
+      /* will move for org, not working as yet*/
+      @media all and (max-width: 600px) {
+        div.BioPic {
+          display:none;
+        }
+      }
+
+      /* Changes the background color of the bio Container */
+      div.Bio:hover {
+        background-color:rgb(77, 151, 180);
+      }
+
+      /* Creates a Row of Two Pics -------------*/
+      div.placesRow, div.placesRow2{
+        margin-left: 12vw;
+        margin-right: 12vw;
+        display: flex;
+        justify-content:space-evenly;
+      }
+
+      /* Picture Properties */
+      div.places, div.places2 {
         float:left;
         width: 50%;
         padding: 5px;
+        transition-delay: .7s;
+        transition: transform .2s, background-color .1s ease-out,
+        font-size .2s, color .1s ease-out;
+      }
+      div.places:hover, div.places2:hover {
+      transform: scale(1.2);
+      font-size:x-large;
+      background-color: rgb(77, 151, 180);
+      color: ghostwhite;
+    }
+
+      /* Favorite Sites, Note: Will be removed for dropdown bar on the Menu */
+      div.favorites {
+        margin-left: 12vw;
+        margin-right: 12vw;
       }
 
+      /* Bottom box used for contacts -------------*/
+      div.bottomBox {
+        background-color:rgb(76, 98, 129);
+        padding: 50px ;
+        margin-top: 100px;
+      }
 
+      /*bottom contact info*/
+      div.bottomText {
+        margin-left: 70%;
+      }
+
+      a.email {
+        color: ghostwhite;
+        text-decoration: none;
+      }
+
+    /* The Navigation Bar -------------*/
+    #navbar {
+      overflow: hidden;
+      background-color: rgb(76, 98, 129);
+      margin-top: -7px;
+    }
+
+    #navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    div.sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+  
+    /* The Dropdown Menu -------------*/
+    #dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    /* The Dropdown Menu */
+    #dropdown button.dropdownbutton {
+      font-size: 16px;  
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    /* Change color on the dropdown elements when hovering */
+    #navbar a:hover, #dropdown:hover button.dropdownbutton {
+      background-color: rgb(199, 181, 181);
+    }
+    #dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 170px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    #dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    #dropdown-content a:hover {
+      background-color: #ddd;
+    }
+    #dropdown:hover #dropdown-content {
+      display: block;
+    }
 
     </style>
-
   </head>
 
   <body>
@@ -97,56 +239,126 @@
     <h1>JOSHUA'S PAGE</h1>
     <hr class="topline">  
 
+    <!--Banner at Top of Page------------------->
     <div class="topcontainer">
-      <img src="Banner_Rome1.jpg" alt="About Me" class="topcenter" style="width:100%">
+      <img src="Banner_Rome1.jpg" alt="About Me" class="topcenter" style="width:100%;">
       <div class="centered">Wecome to My Page</div>
     </div>
 
-    <div class="Bio">
-      <h2>A Little About Me</h2>
-      <blockquote class="Para1" style="margin-left: 0%; margin-right: 0%;"> 
-          <p>My name is Joshua and I’m serving in the United States Air Force as a systems administrator. Born 
-          in Dover, Delaware in 1988, I moved to multiple states until settling in New Hampshire at the age 
-          of 5. I lived on the edge of the White Mountains in New Hampshire in a town that had just over one 
-          thousand people. I took in interest in technology from the start but maintained an active social life 
-          and was employed early on in my life. I worked as a lifeguard at 15 and as a cashier until I was 18. 
-          Upon graduating high school, I joined the Air Force. While the Air Force wasn’t my first choice, I 
-          felt it was best choice as it enabled me to earn money while receiving my education using tuition 
-          assistance. </p>
+    <!-- Navigation Bar--------------------->
+    <div id="navbar">
+      <a href="index.html"><i class="fa fa-home fa-lg"></i> Home</a>
+      <a href="#"><i class="fa fa-camera fa-lg" aria-hidden="true"></i> Multimedia Page</a>
+      <a href="#">My Travels</a>
+      <div id="dropdown">
+        <button class="dropdownbutton"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i> My Favorite Sites 
+          <i class="Buttondrop"></i>
+        </button>
+        <div id="dropdown-content">
+          <a href="https://www.reddit.com/">Reddit</a>
+          <a href="https://www.youtube.com/">Youtube</a>
+          <a href="https://nfl.com/">NFL Network</a>
+        </div>
+      </div> 
+    </div>
 
-        <p>The Air Force has taken me all over the world, starting in Oklahoma all the way to Germany. 
-        Oklahoma wasn’t my favorite but that was balanced out by how amazing Germany was. I couldn’t 
-        begin to tell you all the things I loved about Germany but some of my favorite things were the 
-        castles scattered all over the country, the cobblestone villages with quaint restraints and shops, 
-        the endless road biking trails, and access to travel around Europe. After spending three years in 
-        Germany, I made my way back to the states and now I live in northern Virginia. I love the D.C. area 
-        and all the things that I can do here. While people complain about the traffic, I have access to 
-        some of the best museums, parks, harbors, and historical places. I also met my now wife making this 
-        my favorite place. </p>
+    <script>
+    window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+    </script>
+    <!--MY Bio near the top of page------------------>
+    <div class="Bio">
+      <div class="BioText">
+        <blockquote class="para1" style="margin-left: 0%; margin-right: 0%;"> 
+          <h2>A Little About Me</h2>
+          <p style="color: ghostwhite;">
+            My name is Joshua and I’m serving in the United States Air Force as a systems administrator. Born 
+            in Dover, Delaware in 1988, I moved to multiple states until settling in New Hampshire at the age 
+            of 5. I lived on the edge of the White Mountains in New Hampshire in a town that had just over one 
+            thousand people. I took in interest in technology from the start but maintained an active social life 
+            and was employed early on in my life. I worked as a lifeguard at 15 and as a cashier until I was 18. 
+            Upon graduating high school, I joined the Air Force. While the Air Force wasn’t my first choice, I 
+            felt it was best choice as it enabled me to earn money while receiving my education using tuition 
+            assistance. </p>
+          
+          <p style="color: ghostwhite;">
+            The Air Force has taken me all over the world, starting in Oklahoma all the way to Germany. 
+            Oklahoma wasn’t my favorite but that was balanced out by how amazing Germany was. I couldn’t 
+            begin to tell you all the things I loved about Germany but some of my favorite things were the 
+            castles scattered all over the country, the cobblestone villages with quaint restraints and shops, 
+            the endless road biking trails, and access to travel around Europe. After spending three years in 
+            Germany, I made my way back to the states and now I live in northern Virginia. I love the D.C. area 
+            and all the things that I can do here. While people complain about the traffic, I have access to 
+            some of the best museums, parks, harbors, and historical places. I also met my now wife making this 
+            my favorite place. </p>
+        </blockquote>
+      </div>
+      <div class="BioPic">
+        <picture>
+          <img src="Me.jpg" alt="Me" class="MePic" style="width:100%">
+        </picture>
+      </div>
+    </div>
+
+    <!--Travel Description Box--------------->
+    <div class="travelInfo" style="margin: 6% 12vw 0;">
+      <h3>Places I Traveled To</h3>
+      <blockquote class="para2" style="margin-left: 0%; margin-right: 0%;">
+        <p>One of my favorite things I did while in Germany was travel around the country and the surrounding 
+          countries as much as I could. The pictures below are pictures I took during my travels. </p>
       </blockquote>
     </div>
 
-    <h4>Some of my Favorite Sites</h4>
-    <a href="https://www.reddit.com/" class="reddit">Reddit</a>
-    <a href="https://www.youtube.com/">Youtube</a>
-
-    <div></div>
-    <h3>Places I Traveled To</h3>
-
+    <!-- Pictures from my Travels----------------->
     <div class="placesRow">
       <div class="places">
         <img src="Germany.jpg" alt="Germany" class="germanPic" style="width:100%">
-        <div class="Germany description">Heidelberg, Germany</div>
+        <div class="germanyD">Heidelberg, Germany</div>
       </div>
       <div class="places">
         <img src="London.jpg" alt="London" class="londonPic" style="width:100%">
-        <div class="London description">London, England</div>
+        <div class="londonD">London, England</div>
+      </div>
+    </div>
+    <div class="placesRow2">
+      <div class="places2">
+        <img src="Vatican City.jpg" alt="Vatican" class="VaticanPic" style="width:100%">
+        <div class="vaticanD">Vatican City</div>
+      </div>
+      <div class="places2">
+        <img src="Rome.JPG" alt="Rome" class="RomePic" style="width:100%">
+        <div class="romeD">Rome, Italy</div>
       </div>
     </div>
 
+    <!-- Will move to a dropdown menu on the navigation bar-->
+    <div class="favorites">
+      <h4>Some of my Favorite Sites</h4>
+      <a href="https://www.reddit.com/" style="margin-right: 8px;">Reddit</a>
+      <a href="https://www.youtube.com/" style="padding: 8px">Youtube</a>
+      <a href="https://nfl.com/" style="padding: 8px">NFL Network</a>
+  </div>
+
+    <!--Bottom Banner Will go Here-->
+    <div class="bottomBox">
+      <div class="bottomText">
+        <h5> My Contact Information</h5>
+        <p>
+          <a href="mailto: Joshua.Bouchard@sckans.edu" class="email"><i class="fa fa-envelope" aria-hidden="true"></i> Joshua.Bouchard@sckans.edu</a>
+        </p>
+      </div>
+    </div>
 
   </body>
-
-
 
 </html>
