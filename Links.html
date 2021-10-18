@@ -88,7 +88,6 @@
       background-color: rgb(76, 98, 129);
       margin-top: -7px;
     }
-
     #navbar a {
       float: left;
       font-size: 16px;
@@ -98,13 +97,45 @@
       text-decoration: none;
       display: block;
     }
-
     div.sticky {
       position: fixed;
       top: 0;
       width: 100%;
     }
     
+     /* The properties of a Link Card **************8*/
+    div.card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      max-width: 350px;
+      min-width: 350px;
+      margin: 20px;
+      text-align: center;
+      font-family: arial;
+    }
+    div.cardsRow {
+      display: flex;
+      flex-wrap:wrap;
+      flex-grow: 1;
+      padding: 0 10px;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    button.site {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 10px;
+      color: white;
+      background-color: rgb(77, 151, 180);
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+
+    }
+    button:hover, a:hover {
+      opacity: 0.7;
+    }
 
     </style>
   </head>
@@ -125,7 +156,7 @@
       <a href="index.html"><i class="fa fa-home fa-lg"></i> Home</a>
       <a href="media.html"><i class="fa fa-camera fa-lg" aria-hidden="true"></i> Multimedia Page</a>
       <a href="#">My Travels</a>
-      <a href="Links.html">Favorite Sites</a>
+      <a href="links.html">Favorite Sites</a>
     </div>
 
      <!-- Navigation Bar Stick to top when Scrolling--------------------->
@@ -143,6 +174,46 @@
       }
     }
     </script>
+
+    <!-- Cards used for displaying the sites I visit------------------------------------>
+<h2 style="text-align:center">Sites that I Visit</h2>
+<div class="cardsRow"> 
+    <div class="card">
+        <h2>Reddit.com</h2>
+        <p class="title" style="color: grey; font-size: 18px;">Category: Social Media</p>
+        <div style="margin: 24px 5px;">
+            <p>Reddit is a network of communities where people can dive into their interests, hobbies and passions. There's a community for whatever you're interested in on Reddit.</p>
+        </div>
+        <footer><button class="site">Visit</button></footer>
+    </div>
+
+    <div class="card">
+        <h2>YouTube.com</h2>
+        <p class="title" style="color: grey; font-size: 18px;">Category: Media</p>
+        <div style="margin: 24px 5px;">
+            <p style="margin-bottom: 42px;">Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.</p>
+        </div>
+        <footer><button class="site">Visit</button></footer>
+    </div>
+
+    <div class="card">
+        <h2>GitHub.com</h2>
+        <p class="title" style="color: grey; font-size: 18px;">Category: Software Development</p>
+        <div style="margin: 24px 5px;">
+            <p>GitHub is where over 65 million developers shape the future of software, together. Contribute to the open source community, manage your Git repositories.</p>
+        </div>
+        <footer><button class="site">Visit</button></footer>
+    </div>
+
+    <div class="card">
+        <h2>StackOverflow.com</h2>
+        <p class="title" style="color: grey; font-size: 18px;">Category: Software Development</p>
+        <div style="margin: 24px 5px;">
+            <p>Stack Overflow is the largest, most trusted online community for developers to learn, share​ ​their programming ​knowledge, and build their careers.</p>
+        </div>
+        <footer><button class="site">Visit</button></footer>
+    </div>
+</div>  
 
     <!--Bottom Banner Will go Here-->
     <div class="bottomBox">
