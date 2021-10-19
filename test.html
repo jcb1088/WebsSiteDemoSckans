@@ -1,71 +1,159 @@
 <!DOCTYPE html>
+<!-- 
+  Media Page
+  Coded by: Joshua Bouchard
+  Last Update: 11Oct2021
+  Description: This site is to demonstrate my knowledge for setting up a webpage.
+  Class: CSCI434
+-->
+
+
 <html>
-<style>
-* {
-  box-sizing: border-box;
-}
 
+  <head> 
+    <meta charset="utf-8">
+    <title>Joshua's Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-.header {
-  text-align: center;
-  padding: 32px;
-}
+    <style>
 
-div.cardsRow {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-  margin: 5%;
-}
+      * {
+        box-sizing: border-box;
+      }
 
-/* Create two equal columns that sits next to each other */
-.column {
-    flex: 40%;
-    max-width: 50%;
-    padding: 0 4px;
+      body {
+        background-color:rgba(255, 241, 241, 0.979);
+        font-family:'Trebuchet MS';
+        margin:0; 
+      }
 
-}
+      /* Top text on page "Joshua's Page" */
+      h1 { 
+        color: darkgray;
+        font-size: medium;
+        text-align:left;
+        margin: 1%;
+      }
+      /* "Contact Info Title My Contact info" */
+      h5 {
+        color:ghostwhite;
+        font-size:x-large;
+        margin-bottom: 10px;
+      }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%;
-  }
-}
-</style>
-<body>
+      /* This is the single Line on the top of the page */
+      hr.topline {
+        margin-bottom: 20px;
+        border: 0;
+        border-top: 1px solid #d8d0d0;
+      }
 
-<!-- Header -->
-<div class="header">
-  <h1>Responsive Image Grid</h1>
-  <p>Resize the browser window to see the responsive effect.</p>
-</div>
+      /* This is for the banner and text within the banner on the top of the page -------------*/
+      div.topcontainer {
+        position: relative;
+        text-align: center;
+        font-size:xx-large;
+        color: rgb(202, 188, 188);
+      }
 
-<!-- Photo Grid -->
-<div class="cardsRow"> 
-  <div class="column">
-    <div class="favorites">
-        <h2 style="margin-top: 5px; text-align: center;">Fun Sites</h2>
-        <p class="title">CEO & Founder, Example</p>
-        <p>Harvard University</p>
-        <h3>Fun Sites</h3>
-        <a href="https://www.reddit.com/" style="margin-right: 8px;">Reddit</a>
-        <a href="https://www.youtube.com/" style="padding: 8px">Youtube</a>
-        <a href="https://nfl.com/" style="padding: 8px">NFL Network</a>
+      /* Welcome to my Page Text */
+      div.centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      /* Bottom box used for contacts -------------*/
+      div.bottomBox {
+        background-color:rgb(76, 98, 129);
+        padding: 50px ;
+        margin-top: 100px;
+      }
+
+      /*bottom contact info*/
+      div.bottomText {
+        margin-left: 70%;
+      }
+
+      a.email {
+        color: ghostwhite;
+        text-decoration: none;
+      }
+
+    /* The Navigation Bar -------------*/
+    #navbar {
+      overflow: hidden;
+      background-color: rgb(76, 98, 129);
+      margin-top: -7px;
+    }
+
+    #navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    div.sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    
+
+    </style>
+  </head>
+
+  <body>
+    
+    <h1>JOSHUA'S PAGE</h1>
+    <hr class="topline">  
+
+    <!--Banner at Top of Page------------------->
+    <div class="topcontainer">
+      <img src="Banner_Rome1.jpg" alt="About Me" class="topcenter" style="width:100%;">
+      <div class="centered">Wecome to My Page</div>
     </div>
-  </div>
-  <div class="column">
-    <div class="favorites2">
-        <h4>Some of my Favorite Sites</h4>
-        <a href="https://www.reddit.com/" style="margin-right: 8px;">Reddit</a>
-        <a href="https://www.youtube.com/" style="padding: 8px">Youtube</a>
-        <a href="https://nfl.com/" style="padding: 8px">NFL Network</a>
-    </div>
-  </div>  
- 
-</div>
 
-</body>
+    <!-- Navigation Bar--------------------->
+    <div id="navbar">
+      <a href="index.html"><i class="fa fa-home fa-lg"></i> Home</a>
+      <a href="media.html"><i class="fa fa-camera fa-lg" aria-hidden="true"></i> Multimedia Page</a>
+      <a href="#">My Travels</a>
+      <a href="Links.html">Favorite Sites</a>
+    </div>
+
+     <!-- Navigation Bar Stick to top when Scrolling--------------------->
+    <script>
+    window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+    </script>
+
+    <!--Bottom Banner Will go Here-->
+    <div class="bottomBox">
+      <div class="bottomText">
+        <h5> My Contact Information</h5>
+        <p>
+          <a href="mailto: Joshua.Bouchard@sckans.edu" class="email"><i class="fa fa-envelope" aria-hidden="true"></i> Joshua.Bouchard@sckans.edu</a>
+        </p>
+      </div>
+    </div>
+
+  </body>
+
 </html>
