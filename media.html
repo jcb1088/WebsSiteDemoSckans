@@ -76,6 +76,14 @@
         border-top: 1px solid #d8d0d0;
       }
 
+      /* Centering Something */
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+      }
+
       /* This is for the banner and text within the banner on the top of the page -------------*/
       div.topcontainer {
         position: relative;
@@ -186,6 +194,14 @@
       width: 65%;
       padding-top: 15px;
     }
+
+    iframe.video {
+      display: block;
+      margin: 10px auto 10px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
     </style>
   </head>
 
@@ -225,7 +241,7 @@
     </script>
 
   <!--Setting up OneDrive Guide-->
-  <h2>Setting Up OneDrive</h2>
+  <h2>Setting Up OneDrive on your Window's Computer</h2>
   
   <h3>Why Do Backups?</h3>
   <p style="margin-left: 12vw; margin-right: 12vw;"> As a system’s administrator, one of the most important considerations is to backup all your data and configurations. 
@@ -255,26 +271,33 @@
       <td>Network Connection</td>
     </tr>
     <tr>
-      <td>For Windows: 32-bit or 64-bit version of Windows 10, Windows 8/8.1, or Windows 7</td>
+      <td>Windows OS: 32-bit or 64-bit version of Windows 10, Windows 8/8.1, or Windows 7</td>
     </tr>
     <tr>
-      <td>For Mac: OS X 10.12 or later</td>
+      <td>Processor: 1.6 GHz or higher, or Intel-based Mac computer, or a Windows 10 ARM-based PC</td>
+    </tr>
+    <tr>
+      <td>Memory: 1 GB of RAM or higher</td>
     </tr>
   </table>
+  <p style="margin-left: -webkit-calc(12vw + 3%); font-size: small; color: darkgrey;"> Sourced: https://support.microsoft.com/en-us/office/onedrive-system-requirements-cc0cb2b8-f446-445c-9b52-d3c2627d681e</p>
+
+  <H3>What is OneDrive</H3>
+  <p style="margin-left: 12vw; font-size: small; color: darkgrey;"> - Sourced: https://www.youtube.com/watch?v=f7qy6dz8gEM</p>
+  <iframe width="560" height="315" class="video" src="https://www.youtube.com/embed/f7qy6dz8gEM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <!-- Step One -->
 <div class="steps">
   <div class="title" style="margin-left: -25%;">
-    <h4>Confirm OneDrive is Running</h4>
+    <h4> Open the OneDrive Setup </h4>
   </div>
   <div class="step1">
     <div class="par1">
-      <p> Before configuring OneDrive, make sure that Microsoft OneDrive is running. For Window's based
-        systems, the OneDrive icon is displayed in the system tray when running. 
+      <p> Once Microsoft OneDrive is installed on your system, run the OneDrive setup by searching “OneDrive” In the Window’s search bar and left clicking on the “OneDrive” app that is shown in the search results.
         </p>
     </div>
     <div class="img1">
-      <img src="OneDrive/1.JPG" alt="taskbar" style="max-width: 100%;">
+      <img src="OneDrive/OneDrive1.gif" alt="taskbar" class="center">
     </div>
   </div>
 </div>
@@ -286,14 +309,64 @@
   </div>
   <div class="step1">
     <div class="par1">
-      <p> On the Window's system's tray, right click on the OneDrive's icon and select the settings option.
+      <p> On the OneDrive setup screen, type in the email used for your Mircosoft Account and click on the "Sign in" Button. On the next window, type in your password for your account. Note that a Microsoft Account is required for settting up OneDrive. 
         </p>
     </div>
     <div class="img1">
-      <img src="OneDrive/OneDrive2.gif" alt="taskbar" style="max-width: 100%;">
+      <img src="OneDrive/OneDrive2.JPG" alt="taskbar" class="center">
     </div>
   </div>
 </div>
+
+<!-- Step Three -->
+<div class="steps">
+  <div class="title" style="margin-left: -25%;">
+    <h4>Your OneDrive folder Location</h4>
+  </div>
+  <div class="step1">
+    <div class="par1">
+      <p> For your OneDrive folder, select where you want your OneDrive folder to be located on your system. By default, your OneDrive folder will be located in your user directory on your C drive. Click next after selecting your location. 
+        </p>
+    </div>
+    <div class="img1">
+      <img src="OneDrive/OneDrive3.JPG" alt="taskbar" class="center">
+    </div>
+  </div>
+</div>
+
+<!-- Step Four -->
+<div class="steps">
+  <div class="title" style="margin-left: -25%;">
+    <h4>Back up your folders</h4>
+  </div>
+  <div class="step1">
+    <div class="par1">
+      <p> On the “Back up your folder” window, make sure all three folders are selected: Desktop, Documents, and Pictures. By selecting these options, all items placed in these locations are synced to your OneDrive folder. Click Continue.
+        </p>
+    </div>
+    <div class="img1">
+      <img src="OneDrive/OneDrive4.JPG" alt="taskbar" class="center">
+    </div>
+  </div>
+</div>
+
+<!-- Last Step -->
+<div class="steps">
+  <div class="title" style="margin-left: -25%;">
+    <h4>Getting to know your OneDrive</h4>
+  </div>
+  <div class="step1">
+    <div class="par1">
+      <p> Your OneDrive setup is now complete. The next few windows are there to teach you about how OneDrive functions. 
+        </p>
+    </div>
+    <div class="img1">
+      <img src="OneDrive/OneDrive5.gif" alt="taskbar" class="center">
+    </div>
+  </div>
+</div>
+
+
   <!--Bottom Banner Will go Here-->
   <div class="bottomBox">
     <div class="bottomText">
