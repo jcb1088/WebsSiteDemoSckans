@@ -36,7 +36,7 @@
     /* Title under Menu */
     h2 {
         text-align: left;
-        color: rgb(112, 95, 95);
+        color: rgb(87, 80, 80);
         font-size: 30px;
         margin-top: 5%;
         margin-bottom: 45px;
@@ -45,7 +45,7 @@
       /* Normal Title */
       h3 {
         text-align: left;
-        color: darkgray;
+        color: rgb(87, 84, 84);
         font-size: 25px;
         margin: 20px 12vw 15px 12vw;
       }
@@ -72,12 +72,18 @@
         color: rgb(202, 188, 188);
       }
 
-      /* Welcome to my Page Text */
-      div.centered {
+    /* Welcome to my Page Text */
+    div.centered {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+      }
+
+    /* PFSense Project --------*/
+        div.PFInfo {
+        margin: 20px 14vw 15px 14vw;
+        color: rgb(94, 87, 87);
       }
 
       /* Bottom box used for contacts -------------*/
@@ -164,7 +170,28 @@
     </script>
 
     <!-- Title -->
-    <h2>What is PFSense</h2>
+    <h2> My Network Project - A Customize Router Setup </h2>
+    <h3> What is PFSense? </h3>
+    <div class="PFInfo">   
+        <p>
+            pfSense is a free and open source operating system for routers and firewalls. 
+        </p>
+        <p>
+            pfSense can be installed on most commodity hardware, including old computers and embedded systems. pfSense is typically configured and operated though a user-friendly web interface, making administration easy even for users with limited networking knowledge. Generally, one never needs to use terminal or edit config files to configure the router. Even software updates can be run from the web UI.</p>
+        </p>
+        <p>
+            Source: <a href="https://teklager.se/en/pfsense-introduction-open-source-router-firewall/"> https://teklager.se/en/pfsense-introduction-open-source-router-firewall/ </a>
+        </p>
+    </div>
+    <h3> My Reasons For Building out Router</h3>
+    <div class="PFInfo">   
+        <p>
+            The main reason for this project is to learn about the network side of things. As a system's administrator, this has really helped me understand the network side of IT. PFSense has a powerful firewall that can be customized to block traffic from leaving or entering your network. Another feature I use is DNS and DHCP. I send all my dns request to PFSense and issue out IPs for the network.
+            I use something called pfBlocker that can block ads for all devices on your network. pfBlocker doesn't block all ads since it can only sniff traffic that's not encryped. PFSense supports VLANs and VPNs. Additional modules can be added from the libary. 
+        </p>
+    </div>
+
+    
 
     <!--Bottom Banner Will go Here-->
     <div class="bottomBox">
