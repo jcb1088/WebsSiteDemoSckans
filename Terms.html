@@ -80,22 +80,82 @@
         transform: translate(-50%, -50%);
       }
 
-      /* Bottom box used for contacts -------------*/
-      div.bottomBox {
-        background-color:rgb(76, 98, 129);
-        padding: 50px ;
-        margin-top: 100px;
+      /* Bailey's Bio --------*/
+      div.BaileyBio {
+        margin: 20px 14vw 15px 14vw;
+        color: darkgray;
       }
 
-      /*bottom contact info*/
-      div.bottomText {
-        margin-left: 70%;
+      /* Creates a Row of Two Pics -------------*/
+      div.Row, div.Row2{
+        margin-left: 16vw;
+        margin-right: 16vw;
+        display: flex;
+        justify-content:space-evenly;
       }
 
-      a.email {
+      /* Picture Properties */
+      div.imgs, div.imgs2 {
+        float:left;
+        width: 50%;
+        padding: 5px;
+        transition-delay: .7s;
+        transition: transform .2s, background-color .1s ease-out,
+        font-size .2s, color .1s ease-out;
+      }
+
+    div.imgs:hover, div.imgs2:hover {
+        transform: scale(1.2);
+        font-size:x-large;
+        background-color: rgb(77, 151, 180);
         color: ghostwhite;
-        text-decoration: none;
-      }
+    }
+
+    /* Bailey's Breed Table -----*/
+    table.BaileyTable {
+        text-align: left;
+        margin: 20px 15% 15px 15%;
+        width: 70%;
+    }
+    table.BaileyTable td, table.BaileyTable th {
+        border: 1px solid #24943A;
+        padding: 3px 10px;
+    }
+    table.BaileyTable tbody td {
+        font-size: 16px;
+        color:darkslategray;
+    }
+    table.BaileyTable thead {
+        background: rgb(121, 132, 148);
+    }
+    table.BaileyTable thead th {
+        font-size: 19px;
+        font-weight: bold;
+        color: #F0F0F0;
+        text-align: center;
+    border-left: 2px solid #24943A;
+    }
+    table.BaileyTable thead th:first-child {
+        border-left: none;
+    }
+
+
+    /* Bottom box used for contacts -------------*/
+    div.bottomBox {
+    background-color:rgb(76, 98, 129);
+    padding: 50px ;
+    margin-top: 100px;
+    }
+
+    /*bottom contact info*/
+    div.bottomText {
+    margin-left: 70%;
+    }
+
+    a.email {
+    color: ghostwhite;
+    text-decoration: none;
+    }
 
     /* The Navigation Bar -------------*/
     #navbar {
@@ -164,11 +224,68 @@
     </script>
 
     <!-- Title Of Page-->
-
     <h2> What Breed is My Dog </h2>
+    <h3> Meet Bailey, our newest member to our family </h3>
 
+    <!--Bailey's Bio-->
+    <div class="BaileyBio">
+        <p>
+            My wife and I adopted bailey from a local animal rescue group in June of 2021 and fell in love with her instantly. The rescue group is dedicated to saving the lives of abandoned dogs 
+            from high-risk situations and high-kill shelters from the south. At 8 months old at adoption, she was still learning the ropes and was very timid at almost anything she saw. Overtime 
+            and with patients, she was able to grow out of her shell and become a happy dog. We were unsure of what her breed was, so we decided to have a DNA test performed on her. 
+        </p>
+    </div>
 
+    <!-- Pictures of Bailey----------------->
+    <div class="Row">
+        <div class="imgs">
+            <img src="Bailey/Bailey1.jpg" alt="Bailey1" style="width:100%">
+            <div class="germanyD">Random Picture of Bailey</div>
+        </div>
+        <div class="imgs">
+            <img src="Bailey/Bailey2.jpg" alt="London" style="width:100%">
+            <div class="londonD">With her Favorite Toy</div>
+        </div>
+        </div>
+        <div class="Row2">
+        <div class="imgs2">
+            <img src="Bailey/Bailey3.jpg" alt="Vatican" style="width:100%">
+            <div class="vaticanD">Another Random Picture</div>
+        </div>
+        <div class="imgs2">
+            <img src="Bailey/Bailey4.jpg" alt="Rome" style="width:100%">
+            <div class="romeD">Bailey with her Friend, Luna</div>
+        </div>
+        </div>
 
+    <!-- Breed Description -->
+    <h2 style="text-align: left; margin-left: 12vw;"> Genetic Breed Results </h2>
+    <table class="BaileyTable">
+        <thead>
+        <tr>
+        <th>Breed</th>
+        <th>Percentage</th>
+        <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>Beagle</td><td>34.1%</td><td>The Beagle is a scent hound and a great family pet. They are known for being affectionate and having loud voices.</td></tr>
+        <tr>
+        <td>American Pit Bull Terrier</td><td>28.4%</td><td>The American Pit Bull Terrier originated in the British Isles and descends from the Mastiff-type dogs introduced to England in antiquity. The breed was brought over to the United States by English immigrants in the 1800s, and quickly became one of the most popular and widespread breeds there.</td></tr>
+        <tr>
+        <td>Pointer</td><td>14.1%</td><td>The Pointer is a hard-working bird dog that is happiest when on the hunt. This is a high-energy breed that will be more than a handful for first-time owners. When given a job and plenty of room to run around, the Pointer can make for a wonderful companion.</td></tr>
+        <tr>
+        <td>American Foxhound</td><td>8.7%</td><td>American Foxhounds, the American cousin of the English Foxhounds, are a lucky breed because their history and ancestry are well documented. They came over to the New World in 1650 with a man named Robert Brooke, who sailed from England to Crown Colony in North America (now modern day Maryland and Virginia). This pack of hunting dogs, beloved by the Brooke Family for hundreds of years, evolved to become the American Foxhound. The Brooke hounds were likely mixed with French hounds that were also brought to the Americas, and it was this mix of European breeds that eventually gave us our beloved American Foxhound.</td></tr>
+        <tr>
+        <td>Bluetick Coonhound</td><td>7.2%</td><td>Bluetick Coonhounds are an American breed of hound that originated in the Southern United States, which is a pretty common story for American breeds, particularly hounds. While they can make good house dogs, Bluetick Coonhounds are still mostly hunting dogs.</td></tr>
+        <tr>
+        <td>Supermutt</td><td>7.5%</td><td>Other</td></tr>
+        </tbody>
+        </tr>
+        </table>
+
+        <h3 style="margin-left: 15%;margin-right: 15%; "> Sourced: embarked.com </h3>
     <!--Bottom Banner Will go Here-->
     <div class="bottomBox">
       <div class="bottomText">
