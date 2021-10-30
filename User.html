@@ -85,6 +85,35 @@
         color: rgb(94, 87, 87);
       }
 
+    /* Creates a Row of Two Pics -------------*/
+      div.Row, div.Row2{
+        margin-left: 16vw;
+        margin-right: 16vw;
+        display: flex;
+        justify-content:space-evenly;
+      }
+
+      /* Picture Properties */
+      div.imgs, div.imgs2 {
+        float:left;
+        width: 50%;
+        padding: 5px;
+        transition-delay: .7s;
+        transition: transform .2s, background-color .1s ease-out,
+        font-size .2s, color .1s ease-out;
+      }
+
+    div.imgs:hover, div.imgs2:hover {
+        transform: scale(1.2);
+        font-size:x-large;
+        background-color: rgb(77, 151, 180);
+        color: ghostwhite;
+    }
+
+    div.PFSense {
+        margin-left: 3%;
+    }
+
       /* Bottom box used for contacts -------------*/
       div.bottomBox {
         background-color:rgb(76, 98, 129);
@@ -169,7 +198,7 @@
     </script>
 
     <!-- Title -->
-    <h2> My Network Project - A Customize Router Setup </h2>
+    <h2> My Network Project - A Customized Router Setup </h2>
     <h3> What is PFSense? </h3>
     <div class="PFInfo">   
         <p>
@@ -190,7 +219,23 @@
         </p>
     </div>
 
-    
+    <!-- Pictures of My Setup ----------------->
+    <div class="Row">
+        <div class="imgs">
+            <img src="PFSense/Router2.jpg" alt="Bailey1" style="width:100%">
+            <div class="PFSense">This is My Network Setup. I have a Micro Computer on the Bottom running the PFSense OS. The Router is connected to a unmanaged switch and divided from there. I also have an Unifi Access Point connected to the switch. </div>
+        </div>
+        <div class="imgs">
+            <img src="PFSense/Router3.jpg" alt="London" style="width:100%">
+            <div class="PFSense">Closeup of my PFSense Box</div>
+        </div>
+        </div>
+        <div class="Row2">
+        <div class="imgs2">
+            <img src="PFSense/Router1.jpg" alt="Vatican" style="width:100%">
+            <div class="PFSense">The PFSense Interface </div>
+        </div>
+        </div>
 
     <!--Bottom Banner Will go Here-->
     <div class="bottomBox">
