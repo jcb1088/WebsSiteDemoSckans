@@ -81,13 +81,13 @@
       }
 
     /* The Navigation Bar -------------*/
-    #navbar {
+    #nav {
       overflow: hidden;
       background-color: rgb(76, 98, 129);
-      margin-top: -7px;
+      margin-top: -8px;
     }
 
-    #navbar a {
+    #nav a {
       float: left;
       font-size: 16px;
       color: white;
@@ -97,7 +97,7 @@
       display: block;
     }
 
-    #navbar a:hover {
+    #nav a:hover {
       background-color: rgb(121, 132, 148);
     }
 
@@ -106,6 +106,33 @@
       top: 0;
       width: 100%;
     }
+
+    button.dropbtn {
+      display: none;
+    }
+
+    /* Mobile Devices --------------------------*/
+    @media screen and (max-width: 800px) {
+
+      button.dropbtn {
+        overflow: hidden;
+        background-color: rgb(76, 98, 129);
+        margin-top: -8px;
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      #nav a{
+        display: none;
+      }
+
+    }
+
 
     </style>
   </head>
@@ -122,15 +149,17 @@
     </div>
 
     <!-- Navigation Bar--------------------->
-    <div id="navbar">
-      <a href="index.html"><i class="fa fa-home fa-lg"></i> Home</a>
-      <a href="media.html"><i class="fa fa-camera fa-lg" aria-hidden="true"></i> OneDrive Setup</a>
-      <a href="Travels.html"><i class="fa fa-plane fa-lg" aria-hidden="true"></i> My Travels</a>
-      <a href="Links.html"><i class="fa fa-bookmark fa-lg" aria-hidden="true"></i> Favorite Sites</a>
-      <a href="User.html"><i class="fa fa-wifi fa-lg" aria-hidden="true"></i> PFSense</a>
-      <a href="Terms.html"><i class="fa fa-paw fa-lg" aria-hidden="true"></i> Dog Breeds</a>
-    </div>
-
+    <div class="nav">
+      <button class="dropbtn">Menu</button>
+      <div id="navbar">
+        <a href="index.html"><i class="fa fa-home fa-lg"></i> Home</a>
+        <a href="media.html"><i class="fa fa-camera fa-lg" aria-hidden="true"></i> OneDrive Setup</a>
+        <a href="Travels.html"><i class="fa fa-plane fa-lg" aria-hidden="true"></i> My Travels</a>
+        <a href="Links.html"><i class="fa fa-bookmark fa-lg" aria-hidden="true"></i> Favorite Sites</a>
+        <a href="User.html"><i class="fa fa-wifi fa-lg" aria-hidden="true"></i> PFSense</a>
+        <a href="Terms.html"><i class="fa fa-paw fa-lg" aria-hidden="true"></i> Dog Breeds</a>
+      </div>
+  </div>
     <script>
     window.onscroll = function() {myFunction()};
     
